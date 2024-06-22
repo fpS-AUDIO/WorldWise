@@ -10,6 +10,7 @@ import AppLayout from "./pages/AppLayout";
 import CityList from "./components/CityList";
 import CountryList from "./components/CountryList";
 import City from "./components/City";
+import Form from "./components/Form";
 
 const CITIES_API = "http://localhost:9000";
 
@@ -62,7 +63,7 @@ function App() {
           ></Route>
 
           <Route path="countries" element={<City />}></Route>
-          <Route path="form" element={<p>form</p>}></Route>
+          <Route path="form" element={<Form />}></Route>
         </Route>
         <Route path="*" element={<PageNotFound />}></Route>
       </Routes>
