@@ -1,4 +1,5 @@
 import styles from "./User.module.css";
+import { useFakeAuth } from "../contexts/fakeAuthContext";
 
 const FAKE_USER = {
   name: "Jack",
@@ -10,7 +11,11 @@ const FAKE_USER = {
 function User() {
   const user = FAKE_USER;
 
-  function handleClick() {}
+  const { logOut } = useFakeAuth();
+
+  function handleClick() {
+    logOut();
+  }
 
   return (
     <div className={styles.user}>
